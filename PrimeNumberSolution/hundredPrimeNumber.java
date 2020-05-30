@@ -5,7 +5,8 @@ public class hundredPrimeNumber{
     public static void main(String[] args){
         Scanner sc= new Scanner(System.in);
         System.out.print("Enter number of prime numbers you want: ");  
-        int N = sc.nextInt();
+        int N = sc.nextInt();       //Assuming N is the number of prime numbers user want.
+                                    //Enter N=100 to get 1st 100 prime numbers
 
         int i,b=0,j,count=0;
 
