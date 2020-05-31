@@ -10,12 +10,12 @@ ON s.EmpID = e.EmpID
 UPDATE Salary
 SET Salary = Salary + 5000
 WHERE EXISTS (
-				select s.salary from Salary s
-				join Employee e
-				on e.EmpID = s.EmpID
-				where (
-						CAST(
-						STRFTIME('%Y-%m-%d', 'NOW') - STRFTIME('%Y-%m-%d', Date_of_birth) 
-						AS INT)
-				      ) > 30
-             );
+	select s.salary from Salary s
+	join Employee e
+	on e.EmpID = s.EmpID
+	where (
+			CAST(
+			STRFTIME('%Y-%m-%d', 'NOW') - STRFTIME('%Y-%m-%d', Date_of_birth) 
+			AS INT)
+	      ) > 30
+	);
